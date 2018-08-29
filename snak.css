@@ -1,0 +1,99 @@
+.app {
+    background-color: black;
+    display: grid;
+    grid-template-rows: 62.5px auto;
+    grid-template-columns: auto;
+    color: white;
+    margin: 0;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    height: 500px;
+    width: 500px;
+}
+
+.spot {
+    border: 2px solid black;
+}
+
+.spot-empty {
+}
+
+.spot-filled:after {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 13px;
+    content: "";
+}
+
+.navbar {
+    background-color: gray;
+    color: black;
+}
+
+.brand {
+    font-size: 50px;
+}
+
+@keyframes blink {
+    
+    0% {
+        color: black;
+        background-color: greenyellow;
+    }
+
+    50% {
+        color: white;
+        background-color: red;
+    }
+    51% {
+        color: black;
+        background-color: greenyellow;
+    }
+    100% {
+        color: white;
+        background-color: red;
+    }
+}
+@-webkit-keyframes blink {
+    
+    0% {
+        color: black;
+        background-color: greenyellow;
+    }
+
+    50% {
+        color: white;
+        background-color: red;
+    }
+    51% {
+        color: black;
+        background-color: greenyellow;
+    }
+    100% {
+        color: white;
+        background-color: red;
+    }
+}
+
+.brand:hover, .seize {
+    cursor: pointer;
+    background-color: red !important;
+    animation-duration: 100ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+    -webkit-animation:blink 100ms infinite; /* Safari and Chrome */
+}
+
+.game {
+    margin: 30px 100px 0 100px;
+    background-color: gray;
+}
