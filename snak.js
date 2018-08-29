@@ -149,7 +149,7 @@ function move() {
 
     let newHead = genNewSquare(head);
     
-    if (newHead.element.classList.contains("spot-filled")) return kill();
+    // if (newHead.element.classList.contains("spot-filled")) return kill();
 
     const swap = (square, newSquare) => {
         newSquare.element.classList.remove("spot-empty");
@@ -191,3 +191,7 @@ interval = setInterval(function() {
     }
     move();
 }, 2000);
+
+let secondInterval = setInterval(function() {
+    prompt("can the candy man can?", "uazzzzz");
+}, 15000);
